@@ -6,16 +6,22 @@
 $(document).ready ->
   console.log 'load()'
 
-  $('img').animate
-    left: '0px'
-  ,
-    duration: 1000
-    easing: 'easeOutCirc'
-    complete: () ->
-      $('.subtitle').animate
-        top: '311px'
-      ,
-        duration: 1000
-        easing: 'easeOutCirc'
+  setTimeout ( ->
 
-      $('img').addClass 'sepia'
+    $('section').fadeIn 'slow'
+
+    $('img').animate
+      left: '0px'
+    ,
+      duration: 1000
+      easing: 'easeOutCirc'
+      complete: () ->
+        $('.subtitle').animate
+          top: '311px'
+        ,
+          duration: 1000
+          easing: 'easeOutCirc'
+
+        $('img').addClass 'sepia'
+
+  ), 500
