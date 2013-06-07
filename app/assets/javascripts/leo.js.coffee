@@ -8,7 +8,10 @@ $(document).ready ->
 
   setTimeout ( ->
 
-    $('section').fadeIn 'slow'
+    $('section').animate
+      opacity: 1
+    ,
+      duration: 800
 
     $('img').animate
       left: '0px'
@@ -24,4 +27,4 @@ $(document).ready ->
 
         $('img').addClass 'sepia'
 
-  ), 500
+  ), 800
